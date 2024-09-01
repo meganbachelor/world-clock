@@ -9,28 +9,37 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="src/flag-icons-master/flag-icons.min.css">
     <link rel="stylesheet" href="src/style.css" />
     <title>World Clock</title>
   </head>
   <body>
     <div class="white-box">
-      <h1>World Clock</h1>
+      <h1>WORLD CLOCK</h1>
       <main>
+        <div class="select-container">
         <select>
           <option value="">Select a city..</option>
           <option value="London">London</option>
-          <option value="Paris">Paris</option>
+          <option value="Paris">Paris <i class="fi fi-fr"></i></option>
           <option value="Sydney">Sydney</option>
         </select>
+        </div>
+        <div class ="show-city">
         <div class="city">
-          <h2>New York</h2>
+          <div class="city-date">
+          <h2>New York  <i class="fi fi-us"></i></h2>
           <div class="date">August 31st 2024</div>
-          <div class="time">5:11:25 PM</div>
+          </div>
+         <span class="time-container"><div class="time">5:11:25 <small>PM</small></div></span>
         </div>
         <div class="city">
-          <h2>Bangkok</h2>
+          <div class="city-date">
+          <h2>Bangkok  <i class="fi fi-th"></i></h2>
           <div class="date">August 31st 2024</div>
-          <div class="time">5:11:25 PM</div>
+          </div>
+          <span class="time-container"><div class="time">5:11:25 <small>PM</small></div></span>
+        </div>
         </div>
       </main>
       </br></br>
