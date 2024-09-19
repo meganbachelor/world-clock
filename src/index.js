@@ -26,12 +26,20 @@ function updateCity(event) {
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
 
+  const icons = {
+    "Europe/London": "fi-gb",
+    "Europe/Paris": "fi-fr",
+    "Australia/Sydney": "fi-au",
+  };
+
   let citiesElement = document.querySelector("#cities");
+
+  let iconInc = icons[cityTimeZone] || "";
 
   citiesElement.innerHTML = `
   <div class="city">
     <div>
-      <h2>${cityName}</h2>
+      <h2>${cityName} <i class="fi ${iconInc}"></i></h2>
       <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
     </div>
     <div class="time">${cityTime.format("hh:mm:ss")} <small>${cityTime.format(
