@@ -37,6 +37,10 @@ select {
   border: 1px solid #114b5f;
 }
 
+select:hover {
+  cursor: pointer;
+}
+
 .select-container {
   display: flex;
   justify-content: center;
