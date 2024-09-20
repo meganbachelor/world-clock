@@ -1,3 +1,5 @@
+let intervalCheck;
+
 function updateTime() {
   const cities = [
     { id: "new-york", value: "America/New_York" },
@@ -56,6 +58,19 @@ function updateCity(event) {
   <br>
   <a href="/">Return to homepage</a>
   `;
+
+  clearInterval(intervalCheck);
+
+  intervalCheck = setInterval(() => {
+    let updatedCityTime = moment().tz(cityTimeZone);
+    citiesElement.querySelector(".date").innerHTML =
+      updatedCityTime.format("MMMM Do YYYY");
+    citiesElement.querySelector(".time").innerHTML =
+      updatedCityTime.format("hh:mm:ss") +
+      " <small>" +
+      updatedCityTime.format("A") +
+      "</small>";
+  }, 1000);
 }
 
 updateTime();
