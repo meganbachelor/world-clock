@@ -7,8 +7,14 @@ a {
   color: #1a936f;
 }
 
+a:hover {
+  color: #1a7d55;
+  cursor: pointer;
+}
+
 h1 {
-  font-size: 50px;
+  font-size: 60px;
+  font-weight: 900;
   color: #114b5f;
   text-align: center;
 }
@@ -72,7 +78,7 @@ select {
 
 .time {
   color: #11144c;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
   text-align: right;
 }
